@@ -14,10 +14,11 @@ app.listen(process.env.PORT, () => {
   console.log(`Server listening on port ${process.env.PORT}`);
 });
 
-
+let FRONTEND_URL="https://btowncafe.netlify.app"
+// let FRONTEND_URL="http://localhost:5173"
 app.use(
   cors({
-    origin: [process.env.FRONTEND_URL],
+    origin: FRONTEND_URL,
     methods: ["POST"],
     credentials: true,
   })
